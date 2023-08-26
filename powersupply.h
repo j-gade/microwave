@@ -2,18 +2,34 @@
 #define POWERSUPPLY_H
 
 #include "powerlevel.h"
+#include "doorsensor.h"
 
 class PowerSupply {
 private:
     bool running = false;
     PowerLevel currentPower = PowerLevel::Zero;
+    DoorSensor& door;
 
 // Update class diagram
 public:
-    void setPower(PowerLevel power);
-    PowerLevel getPower() const;
-    bool run();
-    void stop();
+    PowerSupply() = delete;
+    PowerSupply(DoorSensor& doorSensor) : door{doorSensor} {}
+    void setPower(PowerLevel power) {
+        currentPower = power;
+    }
+
+    PowerLevel getPower() const {
+        return currentPower;
+    }
+
+    bool run() {
+        running = door.isClosed() && currentPower != PowerLevel::Zero;
+    }
+
+    void stop() {
+        running = false;
+    }
+
 };
 
 #endif // POWERSUPPLY_H

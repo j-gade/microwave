@@ -6,9 +6,17 @@ private:
     bool closed = true;
 
 public:
-    bool isClosed() const;
-    void close();
-    void open();
+    bool isClosed() const {
+        return closed;
+    }
+
+    void close() {
+        closed = true;
+    }
+
+    void open() {
+        closed = false;
+    }
 
 };
 
