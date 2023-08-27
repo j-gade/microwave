@@ -1,11 +1,14 @@
 #ifndef TIMER_H
 #define TIME_H
 
+#include <chrono>
+#include <thread>
+
 class Timer {
 private:
     int currentTime = 0;
-    int sleepCount = 0;
     bool running = false;
+    const std::chrono::duration<int>one_second = std::chrono::seconds(1);
 
 public:
     void setTime(int time) {
@@ -17,10 +20,13 @@ public:
     }
 
     bool run() {
-        if (currentTime > 0) {
-            running = true;
+        running = currentTime > 0;
+        if (running) {
+            std::this_thread::sleep_for(one_second);
+            --currentTime;
         }
-        // TODO: more timing logic here
+        
+        return running;
     }
 
     void stop() {

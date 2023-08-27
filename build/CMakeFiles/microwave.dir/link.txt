@@ -1,0 +1,3 @@
+C:\winlibs-x86_64-posix-seh-gcc-13.1.0\mingw64\bin\cmake.exe -E rm -f CMakeFiles\microwave.dir/objects.a
+C:\winlibs-x86_64-posix-seh-gcc-13.1.0\mingw64\bin\ar.exe qc CMakeFiles\microwave.dir/objects.a @CMakeFiles\microwave.dir\objects1.rsp
+C:\winlibs-x86_64-posix-seh-gcc-13.1.0\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\microwave.dir/objects.a -Wl,--no-whole-archive -o microwave.exe -Wl,--out-implib,libmicrowave.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\microwave.dir\linkLibs.rsp

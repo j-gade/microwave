@@ -24,6 +24,7 @@ public:
 
     bool run() {
         running = door.isClosed() && currentPower != PowerLevel::Zero;
+        return running;
     }
 
     void stop() {

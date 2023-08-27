@@ -6,6 +6,6 @@ enum class PowerLevel {
     Low,
     Medium,
     High
-}
+};
 
 #endif // POWERLEVEL_H

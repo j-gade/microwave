@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/jgade/prj/CSC300/microwave/build",
+  "command": "C:\\winlibs-x86_64-posix-seh-gcc-13.1.0\\mingw64\\bin\\g++.exe   -g -o CMakeFiles\\microwave.dir\\main.cpp.obj -c C:\\Users\\jgade\\prj\\CSC300\\microwave\\main.cpp",
+  "file": "C:/Users/jgade/prj/CSC300/microwave/main.cpp",
+  "output": "CMakeFiles/microwave.dir/main.cpp.obj"
+}
+]
